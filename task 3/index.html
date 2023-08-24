@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Calculator</title>
+</head>
+
+<style>
+    body{
+        background-image: url("calculator\ bg.jpg");
+    }
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    .calculatorBox{
+        width: 300px;
+        height: 400px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: rgb(117, 178, 170);
+        box-shadow: 1px 2px 4px 1px;
+    }
+    .display{
+        width: 95%;
+        height: 70px;
+        /* border: 1px solid black; */
+        margin: auto;
+        margin: 5px auto 5px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: space-around;
+        background-color: rgb(173, 255, 228);
+        padding: 5px;
+        border-radius: 15px 15px 10px 10px;
+        
+
+    }
+    .buttons{
+        height: 310px;
+        
+        width: 95%;margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    .numbers{
+        width: 75%;
+        /* border: 1px solid black; */
+        height: 97%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        
+    }
+    .symbols{
+        width: 20%;
+        height: 97%;
+        /* border: 1px solid black; */
+        display: grid;
+        grid-template-rows: auto;
+       
+    }
+    .btn{
+        border: 1px solid rgb(15, 113, 76);
+        text-align: center;
+        margin: 3px;
+        border-radius: 5px;
+        box-shadow: 1px 2px 3px 0.5px;
+    }
+    .btn:hover{
+        /* box-shadow: 1px 2px 3px 1px; */
+        box-shadow: 0px 0px 0px 0.5px;
+        /* border: none; */
+        border: 1px solid white;
+        
+   }
+    
+
+     
+  
+    .num{
+        -moz-appearance: textfield; 
+        height: 60%; 
+        text-align: right;
+        font-size: 40px; 
+        font-family: 'Calculator', sans-serif;
+        padding: 5px;
+        /* box-shadow: 1px 1px 10px 1px; */
+        
+    }
+    .preview{
+        -moz-appearance: textfield;  
+        height: 30%; 
+        font-family: 'Calculator', sans-serif;
+        font-size: medium;
+        text-align: right;
+        font-size: 10px;
+        padding: 4px;
+        font-weight: 500;
+        
+    }
+
+    .displayfield{
+        margin: 0px;
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+        border: 1px solid rgb(56, 180, 126);
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: rgba(227, 227, 227, 0.93);
+    }
+
+</style>
+
+<body>
+
+    <h1 style="text-align: center; margin-top:50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(34, 142, 34);">CALCULATOR</h1>
+    
+    <div class="calculatorBox">
+
+        <div class="display">
+           
+            <p id="preview" class="preview displayfield" ></p>
+        
+            <p id="numfield" class="num displayfield" style="font-size: larger;"></p>
+        </div>
+        <div class="buttons">
+            <div class="numbers">
+                <button type="button" class="numbtn btn" id="1" onclick="change(this)" value="1" >1</button>
+                <button type="button" class="numbtn btn" id="2" onclick="change(this)" value="2" >2</button>
+                <button type="button" class="numbtn btn" id="3" onclick="change(this)" value="3" >3</button>
+                <button type="button" class="numbtn btn" id="4" onclick="change(this)" value="4" >4</button>
+                <button type="button" class="numbtn btn" id="5" onclick="change(this)" value="5" >5</button>
+                <button type="button" class="numbtn btn" id="6" onclick="change(this)" value="6" >6</button>
+                <button type="button" class="numbtn btn" id="7" onclick="change(this)" value="7" >7</button>
+                <button type="button" class="numbtn btn" id="8" onclick="change(this)" value="8" >8</button>
+                <button type="button" class="numbtn btn" id="9" onclick="change(this)" value="9" >9</button>
+                <button type="button" class="numbtn btn" id="00" onclick="change(this)" value="00" >00</button>
+                <button type="button" class="numbtn btn" id="0" onclick="change(this)" value="0" >0</button>
+                <button type="button" class="numbtn btn" id="clear" onclick="clearfield(this)" value="0" >C</button>
+
+            </div>
+            <div class="symbols">
+                <button type="button" class="symbolbtn btn" id="plus" onclick="change(this)"  value="+">+</button>
+                <button type="button" class="symbolbtn btn" id="minus" onclick="change(this)" value="-" >-</button>
+                <button type="button" class="symbolbtn btn" id="cross" onclick="change(this)" value="*" >X</button>
+                <button type="button" class="symbolbtn btn" id="divide" onclick="change(this)" value="/">/</button>
+                <button type="button" class="symbolbtn btn" id="equal" onclick="calculate(this)" value="=">=</button>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    let preview = document.getElementById("preview");
+    let numfield = document.getElementById("numfield");
+    
+    console.log(preview)
+    // preview.innerHTML = "hello"
+    // console.log(numfield)
+    let expresion = ""
+    
+    function update(e){
+        expresion = e.value
+    }
+    
+    function change(e){
+     
+
+        expresion = expresion + e.value;
+        numfield.innerHTML = expresion;
+        console.log(expresion);
+    }
+
+    function calculate(e){
+        console.log(eval(expresion))
+
+        preview.innerHTML = expresion;
+        expresion = eval(expresion);
+        numfield.innerHTML = expresion;
+        
+    }
+    function clearfield(e){
+        numfield.innerHTML = "";
+        expresion = "";
+        preview.innerHTML = "";
+        console.log("cleara"+expresion)
+
+    }
+
+
+       // if(e.value == "="){
+            
+        //     numfield.value = eval(expresion);
+        //     preview.value = expresion
+        //     expresion = ""
+            
+        // }else{
+        //     expresion = (expresion)+(e.value);
+        //     numfield.value = expresion;
+        //     console.log(expresion);
+        // }
+
+</script>
+</html>
+

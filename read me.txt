@@ -1,0 +1,4 @@
+there are three folders in this repo task 1 task 2 task 3 
+task 1 : task 1 is simple landing page for a Educational academy called abhinandan academy you can visit to this - at www.abhinandanacademy.in
+task 2 : my profile website built by me for the internship
+task 3 : task three is calculator made using HTML, CSS , Javascript

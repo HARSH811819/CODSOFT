@@ -1,0 +1,142 @@
+.navbar{
+    height: 70px !important;
+    width: 100% !important;
+ 
+    border: none;
+    background-color: rgb(50 46 113);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+.logobox{
+    height: 60px;
+    width: 100px;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.linkbox{
+    width: 40%;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.linkbox a{
+    text-decoration: none;
+    color: white;
+}
+.linkbox a:hover{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.sidenavbtn{
+    display: none;
+}
+#opennav{
+    display: none;
+}
+#closenav{
+    display: none;
+}
+.sidenavbtn{
+    display: none;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: none;
+}
+.sidenavbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    left: 0px;
+    top: 70px;
+    background-color: aqua;
+    transition: width 1s;
+    overflow: scroll;
+}
+.sidenavLinkbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 0px;
+    transition: width 2s;
+    overflow: scroll;
+    height: 50%;
+}
+
+.sidenavLinkbox a{
+    text-decoration: none;
+    color: rgb(163, 5, 5);
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+@media screen and (max-width:670px){
+    .navbar{
+        height: 70px !important;
+        width: 100% !important;
+        border: none;
+        background-color: rgb(50 46 113);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+   
+    .linkbox{
+        display: none;
+    } 
+    .sidenavbtn{
+       
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border: none;
+    }
+    #opennav{
+        display: flex;
+    }
+                                                                                                                           
+
+}
+
+/*  contact links css*/
+.contactbox{
+    height: 30px !important;
+    width: 100% !important;
+    background-color: gray;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .socialmedia{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1ps solid rgb(223, 21, 21);
+  }
+  .socialmedia a{
+    margin: 0px 10px 0px 5px;
+    color: white;
+    font-size: 20px !important;
+  }
