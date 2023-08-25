@@ -1,0 +1,695 @@
+/* Scroll Bar designing */
+            /* width */
+    
+            body{
+                /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+                /* background-color: red; */
+                background-image: url('bg_image.jpg');
+    
+                /* Full height */
+                height: 100%; 
+    
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+            ::-webkit-scrollbar {
+                width: 1px;
+                    
+                }   
+    
+                /* Track */
+                ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey; 
+                border-radius: 10px;
+                }
+                
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                background: rgb(32, 100, 195); 
+                border-radius: 10px;
+                }
+    
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                background: #000000; 
+                }
+    
+    
+                /* Nav bar CSS */
+                .navbar{
+                    height: 120px;
+                    /* border: 1px solid rgb(155, 17, 17); */
+                    background-color: rgb(14, 14, 71);
+                    /* padding: 0px 10vw 0px 10vw; */
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    position: sticky;
+                    top: 0px;
+                    z-index: 100;
+    
+                }
+                .navlogo{
+                    /* border: 1px solid black; */
+                    width: 30%;
+                    height: 90%;
+                    display: flex;
+                    /* border: 1px solid red; */
+                    align-items: center;
+                    margin-left: 50px;
+                }
+                .navlogo img{
+                    /* border: 1px solid red; */
+                    width: 100px;
+                    height: 100px;
+                }
+                .navlogo h2{
+                    margin-left: 2vw;
+                    color: white;
+                /* font-family: ui-monospace; */
+                font-family:'Times New Roman', Times, serif !important;
+                font-size: 2vw;
+                }
+                .navlinkBox{
+                    /* border: 1px solid red; */
+                    width: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    margin-left: 50px;
+                }
+                .links{
+                    text-decoration: none;
+                    
+                    color: white;
+                    margin: 15px;
+                    font-size: 1em;
+                    padding: 3px;
+    
+                }
+                .links:hover{
+                    border: 2px solid white;
+                    color: white;
+                    border-radius: 3px;
+                }
+    
+                .sidenav{
+                    display: none;
+                    /* right: 30px; */
+                    position: absolute;
+                    right: 30px;
+                    /* margin-right: 10px;s  */
+                }
+                .sidenav:hover{
+                    border: 1px solid white;
+                    border-radius: 3px;
+                }
+    
+    
+              /* Courses List Scc Starts here */
+           
+                .coursebox{
+                    display: none;
+                        border: 1px solid gray;
+                    height: 400px;
+                    width: 45vw;
+                    min-width: 300px;
+                    max-width: 600px;
+                    /* margin-right: 20px; */
+                    /* right: 10vw; */
+                    top: 76px;
+                    z-index: 100;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    border-radius: 3px;
+    
+              }
+              .courses-tag:hover .coursebox{
+                  
+                display: flex;
+                position:absolute;  
+                justify-content: start;
+                flex-direction: column;
+              }
+              .course-list{
+                display: flex;
+                width: 100%;
+                height: 80%;
+                color: #000000;
+    
+         
+    
+              }
+              .academics{
+                border-right: 1px dotted black;
+              }
+              .course-category{
+                width: 50%;
+                height: 100%;
+                flex-wrap: wrap;
+             
+                margin: 3px;
+                padding: 3px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: start;
+                align-items: flex-start;
+              }
+              .XI, .IX, .IIT{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height:  fit-content;
+          
+              }
+              .coursename{
+                background-color: white;
+                border: none;
+                margin: 3px;
+              }
+             .coursename:hover{
+                color: red;
+             }
+              .course-heading{
+                border-bottom: 2px dashed black ;
+                /* border: 1px solid black; */
+                width: 100%;
+                height: 30px;
+                color: black;
+                /* padding: 30px; */
+                display: flex;
+                align-items: center;
+              }
+              
+              
+          
+    
+             /* Sidenav-container CSS */
+             .sidenav-container{
+                /* display: none; */
+                width: 0px;
+                height: 100vh;
+                background-color: rgb(255, 255, 255);
+                /* position: fixed; */
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                top: 70px;
+                transition: width 0.6s ;
+                z-index: 1100;
+            }
+            .sideLink-box{
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* border: 1px solid black; */
+                height: 70vh;
+                width: 80vw;
+            }
+            #sidenave-close{
+                display: none;
+            }
+            .side-links{
+                text-decoration: none;
+                font-weight: 800;
+                font-size: larger;
+                color:  rgb(17, 5, 111);
+                margin-bottom:10px;
+    
+            }
+            .sidecourse-box{
+                width: 100%;
+                height: 0px;
+                transition: height 0.6s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(152, 221, 255);
+                z-index: 1500 !important;
+            }
+            #close-btn-side-course{
+                float: left;
+                border: 2px solid red;
+                margin: 5px;
+                border: none;
+                display: none;
+                background-color: inherit;
+                margin: 15px;
+                
+            }
+            .courses-container{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
+            .side-course-category{
+                /* border: 1px solid red; */
+                width: 90vw;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+            .category-heading{
+                font-weight: 800;
+                align-self: flex-start;
+                margin-bottom: 10px;
+            }
+            .side-coursename{
+                border: none;
+                font-weight: 600;
+                color: rgb(15, 15, 108);
+                background-color: inherit;
+                font-size: large;
+                margin-right: 15px;
+    
+            }
+    
+            
+           
+         /* Social Media container */
+         .link-container{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+                border: 1px solid rgb(203, 202, 202);
+                background-color: rgba(202, 197, 197, 0.7);
+                height: 50px ;
+                width: 120px;
+                border-radius: 20px 0px 0px 20px;
+                margin: 3px;
+                position: fixed;
+                /* top: 120px; */
+                right: 0px;
+                width: 50px;
+                transition: width 0.6s;
+                z-index: 1000;
+                overflow: hidden;
+            }
+        
+            .link-container img{
+                width: 40px;
+                margin: 0px 3px 0px 5px;
+            }
+            .link-name{
+                font-weight: 700;
+            }
+            .facebook{
+                top: 120px;
+            }
+            .insta{
+                top: 173px;
+            }
+            .youtube{
+                top: 226px;
+                
+            }
+            .link-container:hover{
+                width: 120px;
+                background-color: rgb(139, 248, 248);
+            }
+    
+    
+    
+            
+           
+             /* banner-container CSS */
+             .banner-container{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+               
+                /* border: 1px solid rgb(184, 180, 180); */
+                width: 100vw;
+                height: 60vh;
+              
+             
+                margin-top: 1px;
+                /* background-color: #eec0c6; 
+                 background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+              
+    
+            }
+            .banner-side-container{
+                width: 25%;
+                height: 100%;
+                overflow-y: scroll;
+                
+             
+            }
+            .Event-slides-container{
+                width: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+             
+            }
+            .banner-inner-container{
+            
+                height: 100%;
+              
+            }
+            .rightbox{
+                /* border: 3px solid red !important; */
+            } 
+    
+    
+            
+            /* responsive code starts here */
+            /* media for less than 770 width */
+            @media only screen and (min-width:380px) and (max-width: 770px) {
+                .navbar{
+                        height: 70px;
+                        /* background-color: rgb(14, 14, 71); */
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        
+    
+                    }
+                     /* SocialMedia Links */
+                     .facebook{
+                        top: 70px;
+                    }
+                    .insta{
+                        top: 122px;
+                    }
+                    .youtube{
+                        top: 174px;
+                        
+                    }
+                    .coursebox{
+                        display: none;
+                    border: 1px solid black;
+                    height: 400px;
+                    width: 45vw;
+                    min-width: 300px;
+                    max-width: 600px;
+                    /* margin-right: 20px; */
+                    top: 76px;
+                    right: 10vw;
+                    z-index: 10;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    border-radius: 3px;
+                    
+                }
+                .navlogo{
+                        width: 50%;
+                        height: 90%;
+                        display: flex;
+                        /* border: 1px solid red; */
+                        align-items: center;
+                        margin-left: 30px;
+                    }
+                    .navlogo img{
+                        width: 60px;
+                        height: 60px;
+                        /* border: 1px solid red; */
+                    }
+                    .navlogo h2{
+                    /* border: 1px solid red; */
+                    color: white;
+                    font-size: 100%;
+                    margin: 0px 0px 0px 20px;
+                    /* font-family:ui-monospace; */
+                    font-family:'Times New Roman', Times, serif !important;
+                    }
+              .navlinkBox{
+                display: none;  
+              }
+              .sidenav{
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+                display: block;
+                position: absolute;
+                right: 50px;
+                /* margin-right: 20px; */
+              }
+    
+    
+               /* Slide container */
+               .banner-container{
+                width: 100%;
+                height: fit-content !important;
+                   display: flex;
+                    flex-direction: column;
+                    /* background-color: aquamarine; */
+                    margin-top: 1px;
+         
+               }
+       
+                .Event-slides-container{
+                width: 100% !important;
+                height: fit-content !important;
+                overflow: hidden;
+                order: 1;
+                display: flex;
+                align-items: start;
+                /* border: 3px solid rgb(255, 11, 11); */
+             
+            }
+    
+            .banner-side-container{
+                width: 100% !important;
+                height: fit-content !important;
+                /* overflow-y: scroll; */
+                /* border: 1px solid black; */
+                order: 2;
+                margin-bottom: 10px
+            }
+          
+            
+    
+               /* Footer Css Starts Here */
+               .footer{
+              
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,59,1) 100%, rgba(178,34,107,1) 100%);
+                height: 400px !important;
+                min-height: 400px;
+                margin-top: 50px;
+                width: 100%;
+          
+            }
+                /* Footer Css Starts Here */
+                .footer{
+              
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,59,1) 100%, rgba(178,34,107,1) 100%);
+                min-height: 400px !important;
+                height: 400px;
+                margin-top: 50px;
+                width: 100%;
+            }
+               
+            }
+    
+          
+    
+    
+            /* media for less than 380 width */
+            @media only screen  and (max-width: 380px){
+               
+             
+                .navbar{
+                        height: 70px;
+                        
+                        background-color: rgb(14, 14, 71);
+                       
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+    
+                    }
+    
+                    /* SocialMedia Links */
+                    
+                    .facebook{
+                        top: 70px;
+                    }
+                    .insta{
+                        top: 122px;
+                    }
+                    .youtube{
+                        top: 174px;
+                        
+                    }
+                .navlogo{
+                  
+                  width: 30%;
+                  height: 90%;
+                  display: flex;
+            
+                  align-items: center;
+                  margin-left: 30px;
+              }
+              .navlogo img{
+                  width: 50px;
+                  height: 50px;
+              }
+    
+              .navlogo h2{
+                  /* border: 1px solid red; */
+                  color: white;
+                  font-size: 100%;
+                  margin: 0px 0px 0px 10px;
+                  /* font-family:ui-monospace; */
+                  font-family:'Times New Roman', Times, serif !important;
+                  }
+    
+                .navlinkBox{
+                display: none;
+                
+              }
+    
+              .sidenav{
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+                position: absolute;
+                display: block;
+                right: 30px;
+                /* margin-right: 20px; */
+              }
+    
+                 /* Baner Container Css For 380 width */
+            .banner-container{
+                width: 100%;
+                max-width: 2000px;
+                height: fit-content !important;
+                   display: flex;
+                    flex-direction: column;
+                    /* background-color: aquamarine; */
+                    margin-top: 1px;
+         
+               }
+       
+                .Event-slides-container{
+                width: 100% !important;
+                height: fit-content !important;
+                overflow: hidden;
+                order: 1;
+                display: flex;
+                align-items: start;
+                /* border: 3px solid rgb(255, 11, 11); */
+             
+            }
+    
+            .banner-side-container{
+                width: 100% !important;
+                height: fit-content !important;
+                /* overflow-y: scroll; */
+                border: 1px solid black;
+                order: 2;
+                margin-bottom: 10px
+            }
+          
+               .rightbox{
+                /* border: 3px solid red !important; */
+            }
+    
+    
+               /* Footer Css Starts Here */
+               .footer{
+            
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,59,1) 100%, rgba(178,34,107,1) 100%);
+                min-height: 400px !important;
+                height: 400px;
+                margin-top: 50px;
+                width: 100%;
+            }
+             
+            }
+    
+    
+            /* Footer Css Starts Here */
+            .footer{
+             
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,17,59,1) 100%, rgba(178,34,107,1) 100%);
+                height: 300px;
+                margin-top: 50px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+             
+                border-radius: 20px 20px 0px 0px;
+            }
+            .footer-info{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                    width: 100%;
+                    height: 50%;
+                    padding: 5px;
+                    /* border: 3px solid red; */
+            }
+            .fa-courses{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .fa-course-name{
+                color: white;
+                margin-right: 10px;
+            }
+    
+    
+            .footer-contact-box{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+              
+                height: 50%;
+            }
+            .footer-contactNo{
+                /* border: 3px solid rgb(255, 255, 255); */
+                display: flex;
+                
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                width: fit-content;
+                color: white;
+            }
+            .phoneNo{
+                font-size: 1.6em;
+                
+            }
+            .footer-socialmedia{
+                display: flex;
+                height: fit-content;
+                width: fit-content;
+                margin-bottom: 5px;
+                /* border: 2px solid red; */
+            }
+            .footer-socialmedia a{
+                text-decoration: none;
+            }
+            .fa-iconbox{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border: 1px solid white;
+                border-radius: 5px;
+                margin: 0px 5px 0px 5px;
+            }
+    
+    
+
+        
+       

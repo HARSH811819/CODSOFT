@@ -1,0 +1,118 @@
+  /* Nav bar CSS */
+  .navbar{
+    height: 120px;
+    /* border: 1px solid rgb(155, 17, 17); */
+    background-color: rgb(14, 14, 71);
+    /* padding: 0px 10vw 0px 10vw; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+.navlogo{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 90%;
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: center;
+    margin-left: 50px;
+}
+.navlogo img{
+    /* border: 1px solid red; */
+    width: 100px;
+    height: 100px;
+}
+.navlogo h3{
+    margin-left: 2vw;
+    color: white;
+font-family: ui-monospace;
+font-size: 2vw;
+}
+.navlinkBox{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.links{
+    text-decoration: none;
+    
+    color: white;
+    margin: 15px;
+    font-size: 1em;
+    padding: 3px;
+
+}
+.links:hover{
+    border: 2px solid white;
+    color: white;
+    border-radius: 3px;
+}
+
+.sidenav{
+    display: none;
+    right: 30px;
+    position: absolute;
+    margin-right: 10px;
+}
+  /* Nav bar CSS */
+  .navbar{
+    height: 120px;
+    /* border: 1px solid rgb(155, 17, 17); */
+    background-color: rgb(14, 14, 71);
+    /* padding: 0px 10vw 0px 10vw; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+.navlogo{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 90%;
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: center;
+    margin-left: 50px;
+}
+.navlogo img{
+    /* border: 1px solid red; */
+    width: 100px;
+    height: 100px;
+}
+.navlogo h3{
+    margin-left: 2vw;
+    color: white;
+font-family: ui-monospace;
+font-size: 2vw;
+}
+.navlinkBox{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.links{
+    text-decoration: none;
+    
+    color: white;
+    margin: 15px;
+    font-size: 1em;
+    padding: 3px;
+
+}
+.links:hover{
+    border: 2px solid white;
+    color: white;
+    border-radius: 3px;
+}
+
+.sidenav{
+    display: none;
+    right: 30px;
+    position: absolute;
+    margin-right: 10px;
+}
